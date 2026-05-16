@@ -1,5 +1,6 @@
 import ExploreBtn from "@/components/ExploreBtn";
-import React from "react";
+import EventCard from "@/components/EventCard";
+import { events } from "@/lib/constants";
 
 const page = () => {
   return (
@@ -15,9 +16,11 @@ const page = () => {
       <div className="mt-20 space-y-7"></div>
       <h3>Featured Events</h3>
 
-      <ul>
-        {[1, 2, 3, 4, 5].map((event) => (
-          <li key={event}>Event {event}</li>
+      <ul className="events list-none">
+        {events.map((event) => (
+          <li key={event.title}>
+            <EventCard {...event} />
+          </li>
         ))}
       </ul>
     </section>
