@@ -15,6 +15,7 @@ const page = () => {
 
       <div className="mt-20 space-y-7"></div>
       <h3>Featured Events</h3>
+      <br />
 
       <ul className="events list-none">
         {events.map((event) => (
